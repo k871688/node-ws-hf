@@ -79,4 +79,137 @@
         .hero img {
             max-width: 100%;
             height: auto;
-            border-radius:
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* * 内容板块 (趣味知识, 相册)
+         */
+        .content-section {
+            padding: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .content-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #4CAF50; /* 绿色标题 */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        /* 趣味知识列表 */
+        .facts-list li {
+            margin-bottom: 10px;
+            list-style-type: disc; /* 使用圆点 */
+            margin-left: 20px;
+        }
+
+        /* * 相册区域 
+         */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover; /* 图像裁剪以填充 */
+            border-radius: 5px;
+            border: 2px solid #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* * 页脚 
+         */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #333;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>🐼 探索大熊猫的世界</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">关于熊猫</a></li>
+                    <li><a href="#facts">趣味知识</a></li>
+                    <li><a href="#gallery">熊猫相册</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="about" class="hero">
+            <img src="https://via.placeholder.com/800x400.png?text=Giant+Panda+Eating+Bamboo" alt="吃竹子的大熊猫">
+            <h2>欢迎来到大熊猫的家园</h2>
+            <p>
+                大熊猫，中国的国宝，以其标志性的黑白皮毛和对竹子的热爱而闻名于世。它们是温和的巨兽，也是野生动物保护的象征。
+            </p>
+        </section>
+
+        <section id="facts" class="content-section">
+            <h3>关于大熊猫的趣味知识</h3>
+            <ul class="facts-list">
+                <li>大熊猫每天有大约12个小时都在吃东西，主要食物是竹子。</li>
+                <li>刚出生的大熊猫幼崽非常小，体重只有约100克，呈粉红色且无毛。</li>
+                <li>它们有“第六指”——一个腕骨的突起，帮助它们抓住竹子。</li>
+                <li>大熊猫是独居动物，它们会通过气味标记来划分领地。</li>
+                <li>野生大熊猫的寿命通常为20年左右，圈养条件下可超过30年。</li>
+            </ul>
+        </section>
+
+        <section id="gallery" class="content-section">
+            <h3>熊猫相册</h3>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200.png?text=Panda+Cub" alt="熊猫幼崽">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200.png?text=Panda+Climbing" alt="爬树的熊猫">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200.png?text=Panda+Playing" alt="玩耍的熊猫">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200.png?text=Panda+Sleeping" alt="睡觉的熊猫">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 大熊猫爱好者网站。保留所有权利。</p>
+    </footer>
+
+</body>
+</html>
